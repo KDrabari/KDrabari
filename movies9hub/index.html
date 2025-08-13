@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movies9Hub – Legal Movie Catalog</title>
+    <meta name="description" content="Movies9Hub is a legal movie catalog for showcasing films you have rights to share. Search, filter, and explore." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">🎬</div>
+          <div class="brand-text">
+            <h1 class="site-title">Movies9Hub</h1>
+            <p class="site-tagline">Legal movie catalog. No piracy.</p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#legal" class="nav-link">Legal</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Search and filters">
+        <div class="search">
+          <input id="search-input" type="search" placeholder="Search movies by title…" aria-label="Search movies by title" />
+        </div>
+        <div class="filters">
+          <select id="genre-filter" aria-label="Filter by genre">
+            <option value="">All genres</option>
+          </select>
+          <select id="year-filter" aria-label="Filter by year">
+            <option value="">All years</option>
+          </select>
+          <select id="sort-select" aria-label="Sort movies">
+            <option value="title-asc">Title A → Z</option>
+            <option value="title-desc">Title Z → A</option>
+            <option value="year-desc">Newest first</option>
+            <option value="year-asc">Oldest first</option>
+            <option value="rating-desc">Top rated</option>
+            <option value="rating-asc">Lowest rated</option>
+          </select>
+        </div>
+      </section>
+
+      <section aria-label="Movie results">
+        <div id="results-summary" class="results-summary">Loading movies…</div>
+        <div id="movies-grid" class="grid"></div>
+      </section>
+
+      <section id="about" class="about">
+        <h2>About Movies9Hub</h2>
+        <p>
+          This website is a template for a legal movie catalog. You can showcase films you
+          own or have the rights to share, embed trailers, and link to legitimate download or streaming
+          sources. It does not include or support any piracy. All content must be licensed appropriately.
+        </p>
+      </section>
+
+      <section id="legal" class="legal">
+        <h2>Legal</h2>
+        <ul>
+          <li>Only upload, link, or distribute content you own or have the rights to share.</li>
+          <li>For public domain works, verify their status in your jurisdiction before distribution.</li>
+          <li>Respect copyright laws and the terms of any platforms you integrate with.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Movies9Hub. For lawful use only.</p>
+        <p class="muted">This is an open, static template. No copyrighted content is included.</p>
+      </div>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true" aria-labelledby="modal-title" role="dialog">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content" role="document">
+        <button class="modal-close" aria-label="Close" data-close>×</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
